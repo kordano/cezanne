@@ -13,7 +13,7 @@
                     1000)
         renderer (js/THREE.WebGLRenderer.)
         geometry (js/THREE.BoxGeometry. 1 1 1)
-        material (js/THREE.MeshBasicMaterial. {:color "0x00ff00"})
+        material (js/THREE.MeshBasicMaterial. {"color" "0x00ff00"})
         cube (js/THREE.Mesh. geometry material)]
     (.setSize renderer (.-innerWidth js/window) (.-innerHeight js/window))
     (.. js/document -body (appendChild (.-domElement renderer)))
@@ -24,12 +24,6 @@
      :renderer renderer}))
 
 
-(js/THREE.WebGLRenderer.)
-
 (defn render [{:keys [scene camera renderer] :as state}]
   (js/requestAnimationFrame render state)
   (.render renderer scene camera))
-
-
-(let [init (init-all)]
-  (render init))
