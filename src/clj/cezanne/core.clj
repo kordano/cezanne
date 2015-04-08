@@ -11,8 +11,8 @@
 
 (defroutes handler
   (resources "/")
-  (GET "/three" [] (io/resource "public/three.html"))
-  (GET "/raw" [] (io/resource "public/raw.html")))
+  (GET "/raw" [] (io/resource "public/raw.html"))
+  (GET "/*" [] (io/resource "public/three.html")))
 
 (defn -main [& args]
   (info "SERVER - Warming up...")
