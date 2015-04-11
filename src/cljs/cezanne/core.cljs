@@ -14,7 +14,7 @@
                     0.1
                     1000)
         renderer (js/THREE.WebGLRenderer.)
-        geometry (js/THREE.CubeGeometry. 1 1 1)
+        geometry (js/THREE.CubeGeometry. 2 2 0.3 )
         material (js/THREE.MeshNormalMaterial. )
         cube (js/THREE.Mesh. geometry material)]
     (.setSize renderer (.-innerWidth js/window) (.-innerHeight js/window))
@@ -32,8 +32,8 @@
 (defn render []
   (js/requestAnimationFrame render)
   (.render (:renderer @state) (:scene @state) (:camera @state))
-  (set! (.. (:cube @state) -rotation -x) (+ (.. (:cube @state) -rotation -x) 0.02))
-  (set! (.. (:cube @state) -rotation -y) (+ (.. (:cube @state) -rotation -y) 0.08)))
+  #_(set! (.. (:cube @state) -rotation -x) (+ (.. (:cube @state) -rotation -x) 0.05))
+  (set! (.. (:cube @state) -rotation -y) (+ (.. (:cube @state) -rotation -y) 0.15)))
 
 
 (init-all)
