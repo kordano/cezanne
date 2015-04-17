@@ -14,7 +14,7 @@
                     0.1
                     1000)
         renderer (js/THREE.WebGLRenderer.)
-        geometry (js/THREE.CubeGeometry. 2 2 2)
+        geometry (js/THREE.CubeGeometry. 2 2 1e-2)
         material (js/THREE.MeshNormalMaterial. )
         cube (js/THREE.Mesh. geometry material)
         cube-2 (js/THREE.Mesh. geometry material)
