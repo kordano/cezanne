@@ -5,24 +5,24 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :source-paths ["src/cljs" "src/clj"]
   :dependencies [[org.clojure/clojure "1.6.0"]
-                 [org.clojure/clojurescript "0.0-2411"]
+                 [org.clojure/clojurescript "0.0-3211"]
                  [org.clojure/core.async "0.1.346.0-17112a-alpha"]
-                 [ring "1.3.1"]
+                 [ring "1.3.2"]
                  [enlive "1.1.5"]
-                 [compojure "1.2.1"]
+                 [compojure "1.3.3"]
                  [http-kit "2.1.19"]
-                 [com.taoensso/timbre "3.3.1"]]
+                 [com.taoensso/timbre "3.4.0"]]
   :min-lein-version "2.0.0"
   :main cezanne.core
-  :plugins [[lein-cljsbuild "1.0.3"]]
+  :plugins [[lein-cljsbuild "1.0.5"]]
+  :hooks [leiningen.cljsbuild]
   :cljsbuild
   {:builds
    [{:source-paths ["src/cljs"]
      :compiler
-     {:output-to "resources/public/js/compiled/main.js"
-      :output-dir "resources/public/js/compiled/out"
+     {:output-to "target/js/compiled/main.js"
+      :output-dir "target/js/compiled/out"
       :externs ["resources/public/static/three/three.min.js"]
       :optimizations :none
       :pretty-print false
-      :source-map "main.js.map"}}]}
-  )
+      :source-map "main.js.map"}}]})
