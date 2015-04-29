@@ -14,14 +14,13 @@
                  [com.taoensso/timbre "3.4.0"]]
   :min-lein-version "2.0.0"
   :main cezanne.core
-  :plugins [[lein-cljsbuild "1.0.5"]]
-  :hooks [leiningen.cljsbuild]
+  :plugins [[lein-cljsbuild "1.0.3"]]
   :cljsbuild
   {:builds
    [{:source-paths ["src/cljs"]
      :compiler
-     {:output-to "target/js/compiled/main.js"
-      :output-dir "target/js/compiled/out"
+     {:output-to "resources/public/js/compiled/main.js"
+      :output-dir "resources/public/js/compiled/out"
       :externs ["resources/public/static/three/three.min.js"]
       :optimizations :none
       :pretty-print false
