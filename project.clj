@@ -14,13 +14,18 @@
                  [com.taoensso/timbre "3.4.0"]]
   :min-lein-version "2.0.0"
   :main cezanne.core
-  :plugins [[lein-cljsbuild "1.0.3"]]
+  :plugins [[lein-cljsbuild "1.0.5"]
+            [lein-figwheel "0.3.1"]]
+  :clean-targets ^{:protect false}["resources/public/js/compiled"]
   :cljsbuild
   {:builds
    [{:source-paths ["src/cljs"]
+     :figwheel { :on-jsload "cezanne.core/reload-hook" }
      :compiler
      {:output-to "resources/public/js/compiled/main.js"
       :output-dir "resources/public/js/compiled/out"
+      :main "cezanne.core"
+      :asset-path "js/compiled/out"
       :externs ["resources/public/static/three/three.min.js"]
       :optimizations :none
       :pretty-print false

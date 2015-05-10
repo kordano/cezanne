@@ -56,8 +56,8 @@
   (set! (.. (:sphere-0 @state) -rotation -y) (+ (.. (:sphere-0 @state) -rotation -y) 1e-2))
   (set! (.. (:ring-0 @state) -rotation -x) (+ (.. (:ring-0 @state) -rotation -x) 2.1e-2))
   (set! (.. (:ring-0 @state) -rotation -y) (+ (.. (:ring-0 @state) -rotation -y) 7.3e-2))
-  (set! (.. (:sphere-1 @state) -rotation -x) (+ (.. (:sphere-1 @state) -rotation -x) -4e-2))
-  (set! (.. (:sphere-1 @state) -rotation -y) (+ (.. (:sphere-1 @state) -rotation -y) -4e-3))
+  (set! (.. (:sphere-1 @state) -rotation -x) (+ (.. (:sphere-1 @state) -rotation -x) -4e-4))
+  (set! (.. (:sphere-1 @state) -rotation -y) (+ (.. (:sphere-1 @state) -rotation -y) -4e-4))
   )
 
 
